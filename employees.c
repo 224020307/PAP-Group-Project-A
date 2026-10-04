@@ -282,6 +282,7 @@ void searchEmployee(void)
             printf("Transport Allowance: %.2f\n", transport[i]);
             printf("Other Allowance: %.2f\n", otherAllowance[i]);
             printf("Total Salary: %.2f\n", totalSalary[i]);
+            printf("---------------------------------------------\n")
         }
     }
     else if (option == 2)
