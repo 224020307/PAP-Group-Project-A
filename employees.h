@@ -31,6 +31,7 @@ double readMoney(const char *prompt);
 int    findEmployeeById(int id);
 double calculateSalary(double basic, double house, double trans, double other);
 
+void employeeMenu(void);
 void   addEmployee(void);
 void   displayEmployees(void);
 void   searchEmployee(void);
