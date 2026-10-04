@@ -1,22 +1,28 @@
 #ifndef SUPPLIERS_H
 #define SUPPLIERS_H
 
-#define MAX_SUPPLIERS 100
+#define MAX_SUPPLIERS       100
+
+#define SUPPLIER_NAME_LEN   80
+#define SUPPLIER_EMAIL_LEN  80
+#define SUPPLIER_TEL_LEN    20
+#define SUPPLIER_TOWN_LEN   50
 
 typedef struct {
     int  id;
-    char name[];
-    char email[];
-    char telephone[];
-    char town[];
-    int  active; // 1 = in use, 0 = empty slot (lets you "delete" without shifting)
+    char name[SUPPLIER_NAME_LEN];
+    char email[SUPPLIER_EMAIL_LEN];
+    char telephone[SUPPLIER_TEL_LEN];
+    char town[SUPPLIER_TOWN_LEN];
+    int  active;            /* 1 = registered, 0 = removed/unused */
 } Supplier;
 
-void supplierMenu(Supplier suppliers[], int *count);
-void addSupplier(Supplier suppliers[], int *count);
-void displaySuppliers(const Supplier suppliers[], int count);
-void searchSupplierByID(const Supplier suppliers[], int count);
-void searchSupplierByName(const Supplier suppliers[], int count);
-void supplierReport(const Supplier suppliers[], int count);
+void supplierMenu(void);
+void addSupplier(void);
+void displaySuppliers(void);
+void searchSupplierByID(void);
+void searchSupplierByName(void);
+void compareSuppliers(void);
+void supplierReport(void);
 
-#endif
+#endif 
