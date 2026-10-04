@@ -1,3 +1,9 @@
+/*
+* MFMS - Employee Management Module (Project A)
+ * Uses arrays, strings and loops,
+ * decisions, functions. No Struckt.
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
