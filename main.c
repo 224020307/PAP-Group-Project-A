@@ -12,7 +12,7 @@ int choice;
 
 do {
  displayMainMenu();
- choice = readint("Enter your choice: ");
+ choice = readInt("Enter your choice: ");
 
 switch (choice) {
 case 1:employeeMenu();
