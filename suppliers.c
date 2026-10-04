@@ -169,9 +169,10 @@ void supplierMenu(void) {
         printf("2. Display Suppliers\n");
         printf("3. Search by ID\n");
         printf("4. Search by Name\n");
-        printf("5. Supplier Report\n");
-        printf("6. Back to Main Menu\n");
-        choice = readIntRange("Enter your choice: ", 1, 6);
+        printf("5. Compare Two Suppliers\n");
+        printf("6. Supplier Report\n");
+        printf("7. Back to Main Menu\n");
+        choice = readIntRange("Enter your choice: ", 1, 7);
 
         switch (choice) {
             case 1:
@@ -187,13 +188,16 @@ void supplierMenu(void) {
                 searchSupplierByName();
                 break;
             case 5:
-                supplierReport();
+                compareSuppliers();
                 break;
             case 6:
+                supplierReport();
+                break;
+            case 7:
                 printf("Returning to main menu...\n");
                 break;
         }
-    } while (choice != 6);
+    } while (choice != 7);
 }
 
 /* ---------- supplier operations ---------- */
@@ -291,6 +295,45 @@ void searchSupplierByName(void) {
     }
 }
 
+
+void compareSuppliers(void) {
+    int idA, idB, a, b;
+
+    if (supplierCount < 2) {
+        printf("At least two suppliers are needed to compare.\n");
+        return;
+    }
+
+    idA = readIntRange("Enter first Supplier ID: ", 1, 999999);
+    idB = readIntRange("Enter second Supplier ID: ", 1, 999999);
+    a = findSupplierIndex(idA);
+    b = findSupplierIndex(idB);
+
+    if (a == -1 || b == -1) {
+        printf("One or both supplier IDs were not found.\n");
+        return;
+    }
+    if (a == b) {
+        printf("Please choose two different suppliers.\n");
+        return;
+    }
+
+    printf("\n%-12s %-28s %-28s\n", "", "Supplier A", "Supplier B");
+    printf("-------------------------------------------------------------------\n");
+    printf("%-12s %-28d %-28d\n", "ID", suppliers[a].id, suppliers[b].id);
+    printf("%-12s %-28s %-28s\n", "Name", suppliers[a].name, suppliers[b].name);
+    printf("%-12s %-28s %-28s\n", "Email", suppliers[a].email, suppliers[b].email);
+    printf("%-12s %-28s %-28s\n", "Telephone",
+           suppliers[a].telephone, suppliers[b].telephone);
+    printf("%-12s %-28s %-28s\n", "Town", suppliers[a].town, suppliers[b].town);
+
+    if (strcmp(suppliers[a].town, suppliers[b].town) == 0) {
+        printf("\nResult: both suppliers are in the same town (%s).\n",
+               suppliers[a].town);
+    } else {
+        printf("\nResult: the suppliers are in different towns.\n");
+    }
+}
 
 void supplierReport(void) {
     int active = 0;

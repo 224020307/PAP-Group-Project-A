@@ -22,6 +22,7 @@ void addSupplier(void);
 void displaySuppliers(void);
 void searchSupplierByID(void);
 void searchSupplierByName(void);
+void compareSuppliers(void);
 void supplierReport(void);
 
-#endif
+#endif 
