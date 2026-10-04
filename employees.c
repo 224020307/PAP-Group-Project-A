@@ -36,7 +36,7 @@ void   employeeReport(void);
 void   displayMenu(void);
 
 /* ---------- Function prototypes ---------- */
-int main(void)
+void employeeMenu(void)
 {
     int choice;
 
