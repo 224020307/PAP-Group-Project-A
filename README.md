@@ -8,13 +8,11 @@
 
 | Student | Student number |
 |---|---|
-| Wame Griffiths | 224029339 |
 | Ameer Majiet | 223067172 |
 | Lasarus Lucas | 216083443 |
 | Ethan Khembo | 224020307 |
 | Shikongo Gerson | 224042823 |
 | Thomas Nikanor | 225000431 |
-| Werner Maria | 223039136 |
 
 ## Project Description
 
