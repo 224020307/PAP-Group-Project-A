@@ -296,6 +296,7 @@ void searchSupplierByName(void) {
 }
 
 
+void compareSuppliers(void) {
     int idA, idB, a, b;
 
     if (supplierCount < 2) {

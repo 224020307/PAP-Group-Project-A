@@ -10,7 +10,7 @@
 
 #define MAX_EMPLOYEES 100
 #define NAME_SIZE 50
-#define DEP_SIZE 30
+#define DEPT_SIZE 30
 
 /* One array per field. Position i in every array = employee i */
 int    ids[MAX_EMPLOYEES];
@@ -67,7 +67,7 @@ void employeeMenu(void)
         }
     } while (choice != 5);
 
-    return 0;
+    return ;
 }
 
 /* ---------- Menu ---------- */
@@ -282,7 +282,7 @@ void searchEmployee(void)
             printf("Transport Allowance: %.2f\n", transport[i]);
             printf("Other Allowance: %.2f\n", otherAllowance[i]);
             printf("Total Salary: %.2f\n", totalSalary[i]);
-            printf("---------------------------------------------\n")
+            printf("---------------------------------------------\n");
         }
     }
     else if (option == 2)
