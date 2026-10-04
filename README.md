@@ -2,8 +2,7 @@
 Group project A
 
 1. Wame Griffiths, 224029339
-2. ⁠Ameer Majiet, 223067172 - Asset Managment(Student 4)
-
+2. ⁠Ameer Majiet, 223067172 - Asset Managment
 3. Lasarus Lucas, 216083443 Part 1: Employee management
 4. Ethan Khembo, 224020307 
 5. Shikongo Gerson, 224042823 Part 3: Supplier management
