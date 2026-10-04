@@ -1,4 +1,4 @@
-*
+/*
  * assets.h
  * Asset Management module - Municipal Financial Management System (MFMS)
  * PAP521S Project A  |  Student 4
