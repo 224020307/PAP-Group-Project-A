@@ -35,8 +35,8 @@ void   searchEmployee(void);
 void   employeeReport(void);
 void   displayMenu(void);
 
-/* ---------- Function prototypes ---------- */
-void employeeMenu(void)
+/* ---------- main ---------- */
+int main(void)
 {
     int choice;
 
@@ -67,7 +67,7 @@ void employeeMenu(void)
         }
     } while (choice != 5);
 
-    return ;
+    return 0;
 }
 
 /* ---------- Menu ---------- */
@@ -246,7 +246,6 @@ void displayEmployees(void)
         return;
     }
 
-    printf("---------------------------------------------------------\n");
     printf("\n%-6s %-20s %-15s %12s\n", "ID", "Name", "Department", "Total Salary");
     printf("---------------------------------------------------------\n");
 
@@ -282,7 +281,6 @@ void searchEmployee(void)
             printf("Transport Allowance: %.2f\n", transport[i]);
             printf("Other Allowance: %.2f\n", otherAllowance[i]);
             printf("Total Salary: %.2f\n", totalSalary[i]);
-            printf("---------------------------------------------\n");
         }
     }
     else if (option == 2)
@@ -348,5 +346,4 @@ void employeeReport(void)
     printf("Average Salary: N$%.2f\n", total / employeeCount);
     printf("Highest Salary: N$%.2f\n", highest);
     printf("Lowest Salary: N$%.2f\n", lowest);
-    printf("\n--- End Of Employee Report ---\n");
 }
