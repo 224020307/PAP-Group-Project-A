@@ -35,8 +35,20 @@ void   searchEmployee(void);
 void   employeeReport(void);
 void   displayMenu(void);
 
-/* ---------- main ---------- */
-int main(void)
+/* ---------- Menu ---------- */
+void displayMenu(void)
+{
+    printf("\n--------------------------------------\n");
+    printf("         EMPLOYEE MANAGEMENT\n");
+    printf("\n-------------------------------------------\n");
+    printf("1. Add Employee\n");
+    printf("2. Display Employees\n");
+    printf("3. Search Employee\n");
+    printf("4. Employee Report\n");
+    printf("5. Back / Exit\n");
+}
+
+void employeeMenu(void)
 {
     int choice;
 
@@ -66,21 +78,6 @@ int main(void)
                 printf("Invalid choice. Please enter 1 to 5.\n");
         }
     } while (choice != 5);
-
-    return 0;
-}
-
-/* ---------- Menu ---------- */
-void displayMenu(void)
-{
-    printf("\n========================================\n");
-    printf("         EMPLOYEE MANAGEMENT\n");
-    printf("========================================\n");
-    printf("1. Add Employee\n");
-    printf("2. Display Employees\n");
-    printf("3. Search Employee\n");
-    printf("4. Employee Report\n");
-    printf("5. Back / Exit\n");
 }
 
 /* ---------- Input helpers (validation) ---------- */
