@@ -19,7 +19,6 @@ void reportsMenu(void)
         printf("5. Back to Main Menu\n");
 
         choice = readInt("Enter your choice: ");
-
         switch (choice)
         {
             case 1:
